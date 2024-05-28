@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* a css reset style sheet is a list of rules that 'reset' almost all of the default styles (aka browser styles) */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border-style: none;
+    font-family: inherit;
+    vertical-align: baseline;
+  }
+  
+  html {
+    min-height: 100vh;
+    font-size: 62.5%;
+  }
+  
+  body {
+    min-height: 100vh;
+    font-size: 1.6rem;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  ul[role=list], ol[role=list] {
+    list-style: none;
+  }
+  
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  
+  li, a, i, figure, img, button,
+  input[type=button], input[type=submit] {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  
+  
+  input, textarea, button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance:none;
+  }
+  
+  input[type=button], input[type=submit], input[type=reset], button, a {
+    cursor: pointer;
+  }
+  
+  

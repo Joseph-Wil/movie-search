@@ -1,0 +1,171 @@
+@charset "UTF-8";
+@import url("./reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --app-button: #E50914;
+    --app-dark-bg: #2a2828;
+    --app-light-bg: #666161;
+    --app-fontcolor-light: #aaa6a6;
+    --app-font-opensans: "Open Sans", sans-serif;
+    --app-font-playfair: "Playfair Display", serif;
+}
+
+.container {
+    width: min(100% - 30px,1080px);
+    margin-inline:auto;
+}
+
+body {
+    min-height: 100dvh;
+    margin: 0;
+    background-color: var(--app-dark-bg);
+    font-family: var(--app-font-opensans);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.page-title, .search-bar {
+    width: 100%;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 26px;
+    margin-top: 10px;
+    color: var(--app-button);
+}
+
+.quote {
+    color: #fff;
+    font-size: 18px;
+}
+
+
+/**************** Search bar and search button ******************/
+
+.search-bar {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.input {
+    font-size: 17px;
+    width: 35%;
+    height: 40px;
+    border-radius: 4px;
+    border: none; 
+    margin: 20px 5px;
+    padding: 4px 8px;
+    background-color: var(--app-light-bg);
+    color: #fff;
+}
+
+.input:focus {
+   outline: 1px solid #2a2828;
+}
+
+.search-button {
+    width: 8rem;
+    height: 42px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    background-color: var(--app-button);
+    color: #fff;
+}
+
+.dropdown {
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+}
+
+.dropdown-item {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--app-button);
+}
+
+
+/*********** Movie Contents ****************/
+
+.movie-box {
+    display: flex;
+    width: 100%;
+    height: 40rem;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.movie {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.movie-details {
+    display: none;  
+    text-align: left;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.movie-image {
+    max-width: 50%;
+    max-height: 40rem;
+    border-radius: 5px;
+    display: none; 
+}
+
+.movie-title {
+    font-size: 28px;
+    color: var(--app-button);
+    margin-bottom: 15px;
+}
+
+.duration, .movie-description {
+    font-size: 17px;
+    color: var(--app-fontcolor-light);
+    margin-bottom: 15px;;
+}
+
+.genre {
+    font-size: 22px;
+    color: var(--app-fontcolor-light);
+}
+
+.blur-effect {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+/********* Hover effects **********/
+
+.search-button:hover {
+    background-color: #d20812;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+
+.dropdown-item:hover {
+    color: var(--app-button);
+    cursor: pointer;
+}
